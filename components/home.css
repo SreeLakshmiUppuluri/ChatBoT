@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif; /* Use Roboto font for a clean look */
+    background-color: #f8f8f8; /* Neutral background color */
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 90vh;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    position: relative;
+}
+
+.chat-history {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 80%;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 12px 16px; /* Adjusted padding */
+    border-radius: 8px; /* Slightly less rounded corners */
+    max-width: 80%;
+    font-size: 16px; /* Slightly smaller font size */
+    line-height: 1.5;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtler shadow */
+}
+
+.message.user {
+    background-color: #e0f2ff; /* Light blue for user messages */
+    color: #333;
+    align-self: flex-end;
+}
+
+.message.bot {
+    background-color: #f5f5f5; /* Very light gray for bot messages */
+    color: #333;
+    align-self: flex-start;
+}
+
+.loading-text {
+    font-size: 14px; /* Smaller font size */
+    color: #666; /* Slightly darker color */
+    text-align: center;
+    margin-top: 15px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+}
+
+.clear-btn {
+    background-color: #f0f0f0; /* Match background for a cleaner look */
+    border: none;
+    padding: 8px 16px; /* Adjusted padding */
+    border-radius: 5px; /* Less rounded corners */
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+    box-shadow: none; /* No shadow */
+    transition: background-color 0.2s ease; /* Faster transition */
+}
+
+.clear-btn:hover {
+    background-color: #e0e0e0; /* Subtle hover effect */
+}
+
+.chat-input {
+    flex-grow: 1;
+    padding: 10px 12px; /* Adjusted padding */
+    border-radius: 5px; /* Less rounded corners */
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtler inner shadow */
+    transition: all 0.2s ease;
+}
+
+.chat-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.15); /* Lighter focus ring */
+}
+
+.send-btn {
+    background-color: #007bff;
+    border: none;
+    padding: 8px 12px; /* Adjusted padding */
+    border-radius: 5px; /* Less rounded corners */
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    margin-left: 10px;
+    box-shadow: none; /* No shadow */
+    transition: background-color 0.2s ease; /* Faster transition */
+}
+
+.send-btn:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px; /* Adjusted margin */
+    font-family: 'Poppins', sans-serif; /* Use Poppins for the header */
+    font-size: 2.5em; /* Slightly smaller header */
+    font-weight: 600;
+    background: linear-gradient(to right, #2193b0, #6dd5ed); /* More subtle gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px; /* Reduced letter spacing */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtler text shadow */
+}
